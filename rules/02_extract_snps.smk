@@ -14,6 +14,8 @@ rule extract_snps:
         out_prefix = f"{OUTPUT_DIR}/{{panel}}"
     log:
         "logs/02_extract_snps_{panel}.log"
+    resources:
+        mem_mb = 64000
     shell:
         """
         ml plink2/1.90b3w 
