@@ -1,0 +1,87 @@
+# Input and data files
+*.txt
+*.yaml
+*.yml
+
+# PLINK files
+*.bed
+*.bim
+*.fam
+*.map
+*.ped
+*.log
+*.nosex
+*.hh
+
+# Output directories
+extracted_data/
+results/
+output/
+data/
+
+# Log files
+logs/
+*.log
+
+# Error files
+*.err
+*.error
+
+# Temporary files
+*.tmp
+*.temp
+*~
+.~*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# R files (in case you use R later)
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# Snakemake
+.snakemake/
+*.snakemake.log
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Compressed files
+*.zip
+*.tar.gz
+*.tgz
+*.gz
+*.bz2
+
+# Keep these code files (negation rules)
+!Snakefile
+!*.smk
+!*.py
+!README.md
+!.gitignore
+
+# TSV/CSV data files
+*.tsv
+*.csv
