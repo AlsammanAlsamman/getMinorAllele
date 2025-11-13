@@ -16,6 +16,9 @@ include: "rules/01_prepare_snplist.smk"
 include: "rules/02_extract_snps.smk"
 include: "rules/03_calculate_allele_freq.smk"
 include: "rules/04_missing_snps_report.smk"
+include: "rules/05_extract_gwas_info.smk"
+include: "rules/06_select_best_pvalue.smk"
+include: "rules/07_create_final_report.smk"
 
 # Main rule to run the entire pipeline
 rule all:
@@ -30,4 +33,10 @@ rule all:
         # Step 3: Allele frequency files for each panel
         expand(f"{OUTPUT_DIR}/{{panel}}.frq", panel=PANEL_NAMES),
         # Step 4: Missing SNPs report
-        "missing_snps_report.txt"
+        "missing_snps_report.txt",
+        # Step 5: GWAS information for SNPs (harmonized)
+        "gwas_snp_info.tsv",
+        # Step 6: Best p-value for each SNP
+        "gwas_snp_best_pvalue.tsv",
+        # Step 7: Final Excel report with annotations and MAF
+        "final_snp_report.xlsx"

@@ -84,3 +84,4 @@ Thumbs.db
 # TSV/CSV data files
 *.tsv
 *.csv
+*.xlsx
